@@ -28,11 +28,13 @@ cin >> g_value;
 while (g_value < 0 || g_value > 255){
   cout << "Invalid G, Try Again: ";
   cin >> g_value;
+}
 cout << "Enter B value: ";
 cin >> b_value;
 while (b_value < 0 || b_value > 255){
   cout << "Invalid B, Try Again: ";
   cin >> b_value;
+}
 
 color = std::to_string(r_value) + delimiter + std::to_string(g_value) + delimiter + std::to_string(b_value);
 //create and write to users file

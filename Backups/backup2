@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void getValidColor( int & );
+int getValidColor( int );
 int getModifiedColor(int);
 
 int main(){
@@ -23,15 +23,15 @@ cout << "Enter a file name: ";
 cin >> file;
 cout << "Enter RGB values individually." << endl << "Enter R value: ";
 cin >> r_value;
-getValidColor(r_value);
+r_value = getValidColor(r_value);
 
 cout << "Enter G value: ";
 cin >> g_value;
-getValidColor(g_value);
+g_value = getValidColor(g_value);
 
 cout << "Enter B value: ";
 cin >> b_value;
-getValidColor(b_value);
+b_value = getValidColor(b_value);
 
 color = std::to_string(r_value) + delimiter + std::to_string(g_value) + delimiter + std::to_string(b_value);
 
@@ -94,11 +94,11 @@ for(int i=0; i < colorValues.size(); i++){
   return 0;
 }
 
-void getValidColor( int & color ){
+int getValidColor( int color ){
   while (color < 0 || color > 255){
-     cout << "Invalid, Try Again: ";
-     cin >> color;
-  } 
+  cout << "Invalid, Try Again: ";
+  cin >> color;
+} return color;
 }
 
 // if input color < 128, add 100 else subtract 100

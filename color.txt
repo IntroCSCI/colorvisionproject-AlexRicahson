@@ -1,6 +1,6 @@
-user color: 200,24,56
-New Color_1: 163,151,162
-New Color_2: 85,83,190
-New Color_3: 241,252,249
-New Color_4: 121,107,82
-New Color_5: 20,19,233
+{background-color:rgb(125,54,109);} /** user color **/ 
+{background-color:rgb(225,54,109);}
+{background-color:rgb(125,154,109);}
+{background-color:rgb(125,54,209);}
+{background-color:rgb(154,54,225);}
+{background-color:rgb(209,209,109);}

@@ -21,7 +21,6 @@ class userColor{
   void getValidColor(int &);
   string toString();
   userColor();
-  //int getModifiedColor(int);
   int getRValue();
   int getGValue();
   int getBValue();

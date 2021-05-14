@@ -7,7 +7,7 @@
 #include "userColor.h"
 #include "colorMod.h"
 
-//move for loop to method
+
 
 using namespace std;
 
@@ -84,45 +84,10 @@ void printColorValues(){
   
 
   userFile << "\n</body>"; userFile << "\n</html>";
-
-
-/*
-  for(int i=0; i < colorValues.size(); i++){
-    if(i < 1){
-      userFile << "\np {\n"; userFile << "   {background-color:rgb(" <<colorValues[i]<< ");}" << " /** user color **//* \n"; userFile << "}\n";
-    } else {
-      userFile << "p"; /*userFile << i;*//* userFile << "{\n"; userFile << "    {background-color:rgb(" << colorValues[i]<<");}" << " /** New Color " << i << "**/ /*\n"; userFile << "}\n";
-    }
-  }
-
- */ 
-
-  }
-  
-
-  
-
-/**
-
-  for(int i=0; i < colorValues.size(); i++){
-    if(i > 1){
-      userFile << "<p
-      {background-color:rgb(" <<colorValues[i]<< ");}" << " /** user color **//* " <<endl;
-    } 
-  }
 }
-*/
 
-/*
-for(int i=0; i < colorValues.size(); i++){
-    if(i < 1){
-      userFile << "{background-color:rgb(" <<colorValues[i]<< ");}" << " /** user color **//* " <<endl;
-    } else {
-      userFile << "{background-color:rgb(" << colorValues[i]<<");}" << endl;
-    }
-  }
-}
-*/
+
+
 
   
 

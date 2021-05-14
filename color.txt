@@ -1,6 +1,44 @@
-{background-color:rgb(125,54,109);} /** user color **/ 
-{background-color:rgb(225,54,109);}
-{background-color:rgb(125,154,109);}
-{background-color:rgb(125,54,209);}
-{background-color:rgb(154,54,225);}
-{background-color:rgb(209,209,109);}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+   background-color: rgb(255,255,255);
+}
+p1{
+   background-color:rgb(44,55,66);
+}
+p2{
+   background-color:rgb(144,44,44);
+}
+p3{
+   background-color:rgb(44,144,44);
+}
+p4{
+   background-color:rgb(44,44,144);
+}
+p5{
+   background-color:rgb(144,44,144);
+}
+p6{
+   background-color:rgb(144,144,44);
+}
+</style>
+</head>
+<body>
+
+<h1>Color Blind Project</h1>
+<p1>user color:rgb(44,55,66)</p1><br>
+
+<p2>color 2:rgb(144,44,44)</p2><br>
+
+<p3>color 3:rgb(44,144,44)</p3><br>
+
+<p4>color 4:rgb(44,44,144)</p4><br>
+
+<p5>color 5:rgb(144,44,144)</p5><br>
+
+<p6>color 6:rgb(144,144,44)</p6><br>
+
+</body>
+</html>

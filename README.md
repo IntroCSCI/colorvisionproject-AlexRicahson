@@ -14,7 +14,7 @@ In this update I added 2 new functions, one for checking user input and one for 
 
 ### v1.0 Updates
 
-*Coming soon*
+In this update I added 2 new classes called userColor and colorMod. User color retrieves an r, g, and b value from the user, checks if the values are between 0 and 255, and then converts it to a string. ColorMod is a class that modifies the users color to create 5 distinct new colors. I also converted the user input and 5 generated colors to a css file  which displays the user color and the 5 new colors highlighted by the color that it is. The format and addition of classes and file type have changed but the program runs the same as it did in the last deliverable.
 
 
 ## Developer
@@ -135,11 +135,59 @@ userFile.open(file, ios::out);
 userFile << "user color: " << color << endl;
 ```
 ```
+
 userFile << "New Color_" << std::to_string(i+1) << ": " << newColor << endl;
 ```
 In my updated code I did the same thing but tried to make the file type css. I was not sure how to do this so I made all colors "background-color". I will do more research for the next deliverable to make sure the format is correct.
 ```
 userFile << "{background-color:rgb(" << colorValues[i]<<");}" << endl;
+```
+In my most recent update I have convereted the user color and 5 new colors into css format and added them to the file.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+   background-color: rgb(255,255,255);
+}
+p1{
+   background-color:rgb(44,55,66);
+}
+p2{
+   background-color:rgb(144,44,44);
+}
+p3{
+   background-color:rgb(44,144,44);
+}
+p4{
+   background-color:rgb(44,44,144);
+}
+p5{
+   background-color:rgb(144,44,144);
+}
+p6{
+   background-color:rgb(144,144,44);
+}
+</style>
+</head>
+<body>
+
+<h1>Color Blind Project</h1>
+<p1>user color:rgb(44,55,66)</p1><br>
+
+<p2>color 2:rgb(144,44,44)</p2><br>
+
+<p3>color 3:rgb(44,144,44)</p3><br>
+
+<p4>color 4:rgb(44,44,144)</p4><br>
+
+<p5>color 5:rgb(144,44,144)</p5><br>
+
+<p6>color 6:rgb(144,144,44)</p6><br>
+
+</body>
+</html>
 ```
 
 ### Arrays/Vectors
@@ -185,4 +233,61 @@ int getModifiedColor(int color ) {
 
 ### Classes
 
-*Coming in version 1.0*
+I used two classes called userColor and colorMod to retrieve the users input and create 5 new colors from it. The first class is called userColor and it gets the users input as 3 seperate integers and then combines them into a string. The second class is called colorMod and contains the function for creating the new color values which is called in main.
+```
+#include "userColor.h"
+#include "iostream"
+#include <string>
+#include <vector>
+
+
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
+using std::cin;
+
+
+userColor::userColor(void){
+  delimiter = ",";
+}
+
+void userColor::getUserColor(){
+  cout << "Enter RGB values individually." << endl << "Enter R value: ";
+  cin >> r_value;
+  getValidColor(r_value);
+
+  cout << "Enter G value: ";
+  cin >> g_value;
+  getValidColor(g_value);
+
+  cout << "Enter B value: ";
+  cin >> b_value;
+  getValidColor(b_value);
+}
+
+
+void userColor::getValidColor(int & color){
+  while (color < 0 || color > 255){
+     cout << "Invalid, Try Again: ";
+     cin >> color;
+  } 
+}
+
+string userColor::toString(){
+   return std::to_string(r_value) + delimiter + std::to_string(g_value) + delimiter + std::to_string(b_value);
+}
+
+int userColor::getRValue(){
+  return r_value;
+}
+
+
+int userColor::getGValue(){
+  return r_value;
+}
+
+int userColor::getBValue(){
+  return r_value;
+}
+```

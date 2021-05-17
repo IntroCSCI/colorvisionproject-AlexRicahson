@@ -207,7 +207,7 @@ for(int i=0; i < colorValues.size(); i++){
 ```
 ### Functions
 
-I used one funtion to test the users R, G, and B values to make sure they are not below 0 or above 255. I used another function to create 5 new colors that are added to the file. The first function I used is pass by reference and the second is pass by value. The reurn type for the first function is void and the return type for the second function is the modified color.
+I used one funtion to test the users R, G, and B values to make sure they are not below 0 or above 255. I used another function to create 5 new colors that are added to the file. In my most recent update I also added a function to convert the users input and the 5 new colors to css format and write it to the file. The first function I used is pass by reference and the second is pass by value. The reurn type for the first function is void and the return type for the second function is the modified color.
 ```
 void getValidColor( int & color ){
   while (color < 0 || color > 255){
